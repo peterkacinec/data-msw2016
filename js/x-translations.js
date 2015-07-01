@@ -86,6 +86,7 @@ angular.module('x-registries')
 		"accounting.info.company.fees.credit": "Kredit",
 		"accounting.info.company.fees.assocMember": "Člen asociácie",
 		"accounting.info.club.user.status":"Bilancia členov",
+		"accounting.info.company.fees.paymentSum": "Platby spolu",
 
 
 		"schema.people.personalProfile":"Môj profil",
@@ -407,6 +408,8 @@ angular.module('x-registries')
 		"accounting.info.company.fees.overdue.value": "V částce",
 		"accounting.info.company.fees.credit": "Kredit",
 		"accounting.info.company.fees.assocMember": "Člen asociace",
+		"accounting.info.company.fees.paymentSum": "Platby spolu",
+
 
 		"schema.mailTemplate.basedata.name":"Název šablony",
 		"schema.mailTemplate.basedata.subject":"Predment mailu",
@@ -790,6 +793,7 @@ $translateProvider.translations('en', {
 		"accounting.info.company.fees.overdue.value": "V částce",
 		"accounting.info.company.fees.credit": "Kredit",
 		"accounting.info.company.fees.assocMember": "Člen asociace",
+		"accounting.info.company.fees.paymentSum": "Platby spolu",
 
 		"schema.fees.title":"Fee",
 		"schema.fees.baseData":"Basic information",
