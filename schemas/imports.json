@@ -14,13 +14,24 @@
 					"type": "string",
 					"required": true,
 					"render": {
-						"component": "psui-uploadable-file"
+						"component": "xpsui-uploadable-file"
+					},
+					"properties": {
+						"fileName": {
+							"type": "string"
+						},
+						"fileId": {
+							"type": "string"
+						},
+						"size": {
+							"type": "number"
+						}
 					}
 				},
 				"type": {
 					"title": "Fotografia",
 					"transCode": "schema.imports.type",
-					"type": " string",
+					"type": "string",
 					"enum": [
 						"Bankový výpis - CSV"
 					],
@@ -33,7 +44,7 @@
 				"createdOn": {
 					"title": "Vytvorene",
 					"transCode": "schema.imports.createdOn",
-					"type": "Date",
+					"type": "string",
 					"timestamp" : true
 				}
 			}
@@ -67,7 +78,7 @@
 			},
 			"properties": {
 				"baseData": {
-					"extends":"uri://registries/imports#blocks/import"
+					"$ref":"uri://registries/imports#blocks/import"
 				}
 			}
 		}
@@ -87,10 +98,19 @@
 				}
 			},
 			"view": {
-				"extends":"uri://registries/imports#models/import"
+				"$ref":"uri://registries/imports#models/import"
 			},
 			"search": {
 				"extends":"uri://registries/imports#models/import",
+				"clientActions": [
+					{
+						"__DIRECTIVE__": "schema-redirect-link",
+						"title": "Zobraziť",
+						"params": {
+							"path": "/registry/view/uri~3A~2F~2Fregistries~2Fimports~23views~2Fimport/{{model.id}}"
+						}
+					}
+				],
 				"listFields": [
 					{
 						"field": "baseData.createdOn",
@@ -103,7 +123,7 @@
 						"transCode": "schema.imports.type"
 					},
 					{
-						"field": "baseData.file",
+						"field": "baseData.file.fileName",
 						"title": "Soubor",
 						"transCode": "schema.imports.file"
 					}

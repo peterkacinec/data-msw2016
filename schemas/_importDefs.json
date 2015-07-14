@@ -40,7 +40,7 @@
         "set":[{"baseData.status":"Unpaired"},
                {"baseData.importId":"$importId"}],
         "save":"payments",
-        "saveBySchema":"uri://registries/payments#view",
+        "saveBySchema":"uri://registries/payments#views/payment/view",
         "checkSum":{
             "to":"baseData.checksum",
             "includes": ["baseData.variableSymbol","baseData.constantSymbol","baseData.accountingDate","baseData.amount","baseData.bankRef"]

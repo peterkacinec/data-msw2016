@@ -13,7 +13,7 @@
 		this.handleImportCreated=function(event){
 		var entity = event.entity;
 			log.verbose('handling',entity);
-			self.ctx.importService.import(entity.baseData.type,entity.id,entity.baseData.file,function(err){
+			self.ctx.importService.import(entity.baseData.type,entity.id,entity.baseData.file.fileId,function(err){
 				if (err){
 					log.error(err);
 				}else {
