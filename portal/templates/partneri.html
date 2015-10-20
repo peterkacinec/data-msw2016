@@ -1,4 +1,4 @@
-<!-- With sidebar -->
+<!-- Partneri -->
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -53,22 +53,105 @@
 			</a>
 		</div>
 		<div id="portal-content-container">
-			<div id="portal-main-content">
+			<div id="portal-main-content-partneri">
 				{% for widget in article.data %}
 					<article class="portal-article {{ widget.meta.type }} portal-article-{{ widget.meta.name }}">
 						{% set templatePath = "widgets/" + widget.meta.type + ".widget" %}
 						{% include templatePath with widget only %}
 					</article>
 				{% endfor %}
-			</div>
-			<div id="portal-side-content">
-				<section class="portal-side-panel">
-					<h1>Sociální média</h1>
-					<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fcaihp.cz&amp;width=275&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=1439958052895846" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:275px; height:300px;" allowtransparency="true"></iframe>
-					<br>
-					<br>
-					<a class="twitter-timeline" href="https://twitter.com/CAIHPcz" data-widget-id="656449452023128065">Tweets by @CAIHPcz</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</section>
+					<div class="portal-partneri-container">
+						<section>	     
+							<h1>PARTNEŘI CAIHP</h1>
+							<br>
+							PRO INFORMACI O AKTUÁLNÍCH ČLENSKÝCH VÝHODÁCH U NAŠICH PARTNERŮ KONTAKTUJTE <a href="mailto:INFO@CAIHP.CZ">INFO@CAIHP.CZ</a> NEBO ZADEJTE VÁŠ POŽADAVEK PŘÍMO PŘES ČLENSKOU ZÓNU.
+						</section>
+						<section class="portal-partneri-row">
+							<article class="portal-partneri-image">
+								<img src="/portal/img/unicredit.png" alt="" width="800">
+							</article>
+						</section>
+						<section class="portal-partneri-row">
+							<article class="portal-partneri-image">
+								<img src="/portal/img/legalcom.png" alt="">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/bmw.png" alt="">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/sedpo.png" alt="">
+							</article>
+						</section>
+						<section class="portal-partneri-row">
+							<article class="portal-partneri-image">
+								
+							</article>
+						</section>
+						<section class="portal-partneri-row">
+							<article class="portal-partneri-image">
+								<img src="/portal/img/sporilov2.png" alt="" width="900">
+							</article>
+						</section>
+						<section class="portal-partneri-row">
+							<article class="portal-partneri-image">
+								<img src="/portal/img/nespresso.png" alt="">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/dusak.png" alt="">
+							</article>
+						</section>
+						<section class="portal-partneri-row">
+							<article class="portal-partneri-image">
+								<img src="/portal/img/vodafone2.png" alt="">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/top4sport.png" alt="">
+							</article>
+						</section>
+						<section class="portal-partneri-row">
+							<article class="portal-partneri-image">
+								<img src="/portal/img/aviko.png" alt="" width="150">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/edox.png" alt="" width="150">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/botas.png" alt="" width="150">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/samina.jpg" alt="" width="150">
+							</article>
+						</section>
+						<section class="portal-partneri-row">
+							<article class="portal-partneri-image">
+								<img src="/portal/img/nk.png" alt="" width="150">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/lehotel.png" alt="" width="150">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/deminka.png" alt="" width="150">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/katr.jpg" alt="" width="150">
+							</article>
+						</section>
+						<section class="portal-partneri-row">
+							<article class="portal-partneri-image">
+								<img src="/portal/img/trico.jpg" alt="" width="150">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/smarty.jpg" alt="" width="150">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/viking.png" alt="" width="150">
+							</article>
+							<article class="portal-partneri-image">
+								<img src="/portal/img/lbm.jpg" alt="" width="150">
+							</article>
+						</section>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

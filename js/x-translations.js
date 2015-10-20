@@ -317,7 +317,12 @@ angular.module('x-registries')
 		"schema.securityMaster.new":"Nový bezpečnostný profil",
 
 		"schema.member.view":"Člen",
-
+		"schema.portalArticles.title":"Zoznam článkov",
+		"schema.portalArticles.meta":"Základné údaje",
+		"schema.portalArticles.tags":"Tagy",
+		"schema.portalArticles.template":"Template",
+		"schema.portalArticles.publishFrom":"Dátum uverejnenia",
+		"schema.portalArticles.enabled":"Publikovať?"
 	});
 
 	$translateProvider.translations('cz', {
@@ -325,7 +330,6 @@ angular.module('x-registries')
 		"enum.boolean.false":"Ne",
 		"enum.active.A":"aktivní",
 		"enum.active.I":"neaktivní",
-
 
 		"menu.member.title": "Člen",
 		"menu.player.title": "Hráč",
@@ -462,14 +466,11 @@ angular.module('x-registries')
 		"schema.fees.baseData.notes":"Poznámka",
 		"schema.fees.baseData.feePaymentStatus":"Stav",
 
-
-
 		"schema.fees.baseData.feePaymentStatus.created": "Vytvorený",
 		"schema.fees.baseData.feePaymentStatus.refunded":"Zaplatený",
 		"schema.fees.baseData.feePaymentStatus.differs":"Rozdiel",
 		"schema.fees.baseData.feePaymentStatus.overdue":"Po splatnosti",
 		"schema.fees.baseData.feePaymentStatus.canceled":"Zrušený",
-
 
 		"schema.fees.listFields.name":"Jméno",
 		"schema.fees.listFields.surName":"Příjmení",
@@ -507,7 +508,6 @@ angular.module('x-registries')
 		"schema.mailTemplate.basedata.text":"Text vzoru",
 		"schema.mailTemplate.basedata.html":"HTML vzor",
 		"schema.mailTemplate.listFields.title":"Názov vzoru",
-
 
 		"schema.people.isActivePartner":"Je aktivní partner",
 		"schema.people.isActivePartner.yes":"Áno",
@@ -650,7 +650,14 @@ angular.module('x-registries')
 
 		"schema.securityMaster.title":"Bezpečnostní profil",
 
-		"schema.member.view":"Člen"
+		"schema.member.view":"Člen",
+
+		"schema.portalArticles.title":"Seznam článkú",
+		"schema.portalArticles.meta":"Základní údaje",
+		"schema.portalArticles.tags":"Tagy",
+		"schema.portalArticles.template":"Template",
+		"schema.portalArticles.publishFrom":"Datum zveřejnění",
+		"schema.portalArticles.enabled":"Publikovat?"
 	});
 
 $translateProvider.translations('en', {
@@ -854,6 +861,13 @@ $translateProvider.translations('en', {
 		"schema.security.listFields.name":"Profile name",
 		"schema.security.baseData.name":"Profile name",
 
-		"schema.member.view":"Member"
+		"schema.member.view":"Member",
+
+		"schema.portalArticles.title":"List of articles",
+		"schema.portalArticles.meta":"Base Data",
+		"schema.portalArticles.tags":"Tags",
+		"schema.portalArticles.template":"Template",
+		"schema.portalArticles.publishFrom":"Date of publication",
+		"schema.portalArticles.enabled":"Publish?"
 	});
 }]);

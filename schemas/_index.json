@@ -20,5 +20,6 @@
 	"commonTypes.json",
 	"generalRequests.json",
 	"registrationRequests.json",
-	"dataChangeRequests.json"
+	"dataChangeRequests.json",
+	"portalArticles.json"
 ]

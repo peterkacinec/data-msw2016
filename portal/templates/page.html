@@ -1,4 +1,4 @@
-<!-- With sidebar -->
+<!-- Without sidebar -->
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -53,22 +53,13 @@
 			</a>
 		</div>
 		<div id="portal-content-container">
-			<div id="portal-main-content">
+			<div id="portal-main-content" style="width:970px;">
 				{% for widget in article.data %}
 					<article class="portal-article {{ widget.meta.type }} portal-article-{{ widget.meta.name }}">
 						{% set templatePath = "widgets/" + widget.meta.type + ".widget" %}
 						{% include templatePath with widget only %}
 					</article>
 				{% endfor %}
-			</div>
-			<div id="portal-side-content">
-				<section class="portal-side-panel">
-					<h1>Sociální média</h1>
-					<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fcaihp.cz&amp;width=275&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=1439958052895846" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:275px; height:300px;" allowtransparency="true"></iframe>
-					<br>
-					<br>
-					<a class="twitter-timeline" href="https://twitter.com/CAIHPcz" data-widget-id="656449452023128065">Tweets by @CAIHPcz</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</section>
 			</div>
 		</div>
 	</div>

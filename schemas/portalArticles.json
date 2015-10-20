@@ -1,0 +1,87 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"id": "uri://registries/portalArticles#",
+
+	"search": {
+		"title": "Zoznam článkov",
+		"transCode": "schema.portalArticles.title",
+		"table": "portalArticles",
+		"security": {
+			"create": {
+				"static": [
+					"Registry - write"
+				]
+			},
+			"read": {
+				"static": [
+					"Registry - read"
+				]
+			},
+			"modify": {
+				"static": [
+					"Registry - write"
+				]
+			}
+		},
+		"properties": {
+			"meta": {
+				"title": "Základné údaje",
+				"transCode": "schema.portalArticles.meta",
+				"type": "object",
+				"properties": {
+					"title": {
+						"title": "Názov",
+						"transCode": "schema.portalArticles.title",
+						"type": "string"
+					},
+					"tags": {
+						"title": "Tagy",
+						"transCode": "schema.portalArticles.tags",
+						"type": "string"
+					},
+					"template": {
+						"title": "Template",
+						"transCode": "schema.portalArticles.template",
+						"type": "string"
+					},
+					"publishFrom": {
+						"extends":"uri://registries/commontypes#blocks/date",
+						"title": "Uverejnené",
+						"transCode": "schema.portalArticles.publishFrom"
+					}
+				}
+			}
+		},
+		"clientActions": [
+			{
+				"__DIRECTIVE__": "schema-redirect-link",
+				"title": "Zobraziť",
+				"params": {
+					"path": "/portal/edit/{{model.id}}"
+				}
+			}
+		],
+		"listFields": [
+			{
+				"field": "meta.title",
+				"title": "Názov",
+				"transCode": "schema.portalArticles.title"
+			},
+			{
+				"field": "meta.tags",
+				"title": "Tagy",
+				"transCode": "schema.portalArticles.tags"
+			},
+			{
+				"field": "meta.publishFrom",
+				"title": "Publikované",
+				"transCode": "schema.portalArticles.publishFrom"
+			},
+			{
+				"field": "meta.template",
+				"title": "Template",
+				"transCode": "schema.portalArticles.template"
+			}
+		]
+	}
+}

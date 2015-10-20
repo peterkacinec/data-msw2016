@@ -1,3 +1,4 @@
+<!-- detail clanku -->
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -16,42 +17,35 @@
 	<link rel="stylesheet" type="text/css" href="/portal/css/standalone.css">
 	<link rel="stylesheet" type="text/css" href="/portal/css/portal.css">
 	<link rel="stylesheet" type="text/css" href="/portal/css/font-awesome.min.css">
-
+	<link rel="icon" href="/portal/img/favicon.png" type="image/x-icon">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
 	<div id="portal-main-container">
 		<div id="portal-header-container">
+			<div class="black-bckg"></div>
 			<header id="portal-main-header">
-				<h1 >Česká asociace hokejistů</h1>
 				<a href="/">
-					<img class="portal-logo" src="/portal/img/portal-logo.png" alt="logo" title="Rotary club Bratislava International" />
+					<img class="portal-logo" src="/portal/img/portal-logo.png" alt="logo" title="caihp" />
 				</a>
+				<div id="portal-menu-panel-container">
+					{% block menu %}
+						<ul id="portal-menu-panel">
+							{%for k in menu %}
+								<li class="portal-menu-entry">
+									<a href="/article/{{k.aid}}">{{k.name}}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endblock menu %}
+				</div>
 			</header>
 		</div>
 		<div id="mobile-menu-toggler">
 			<a href="" class="toogle-menu" >
 				<i class="fa fa-align-justify"></i>
 			</a>
-		</div>
-		<div id="portal-menu-panel-container">
-			{% block menu %}
-				<div id="portal-menu-panel">
-					{%for k in menu %}
-						<div class="portal-menu-entry"><a href="/article/{{k.aid}}">{{k.name}}</a>
-							<div class="portal-sub-menu">
-								{% for s in k.subElements %}
-									<div><a href="/article/{{s.aid}}">{{s.name}}</a></div>
-								{% endfor %}
-							</div>
-						</div>
-					{% endfor %}
-					<div class="menu-login-container">
-						<a class="menu-login" href="https:\\rotary.test.unionsoft.sk">prihlasit</a>
-					</div>
-				</div>
-			{% endblock menu %}
 		</div>
 		<div id="portal-content-container">
 			<div id="portal-main-content">
@@ -62,13 +56,79 @@
 					{% endfor %}
 				</article>
 			</div>
+			<div id="portal-side-content">
+				<section class="portal-side-panel">
+					<h1>Sociální média</h1>
+					<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fcaihp.cz&amp;width=275&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=1439958052895846" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:275px; height:300px;" allowtransparency="true"></iframe>
+					<br>
+					<br>
+					<a class="twitter-timeline" href="https://twitter.com/CAIHPcz" data-widget-id="656449452023128065">Tweets by @CAIHPcz</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</section>
+			</div>
 		</div>
 	</div>
-	<div id="footer-container">
-		<header id="main-footer">
-			Unionsoft, s.r.o, Všetky práva vyhradené
-		</header>
-	</div>
+	<footer>
+		<div id="footer-container">
+			<article class="patatext">
+				<h1>ASOCIACE</h1>
+				<ul>
+					<li><a href="http://www.nhlpa.com" target="_blank">NHLPA</a></li>
+					<li><a href="http://www.saip.ch/" target="_blank">SAIP</a></li>
+					<li><a href="http://www.sico.nu/" target="_blank">SICO</a></li>
+					<li><a href="http://www.sjry.fi/" target="_blank">FHPA</a></li>
+					<li><a href="http://www.niso.no/" target="_blank">NISO</a></li>
+					<li><a href="http://www.khlptu.ru/" target="_blank">KHLPTU</a></li>
+					<li><a href="http://www.waipu.org/" target="_blank">WAIPU</a></li>
+				</ul>
+			</article>
+
+			<article class="patatext">
+				<h1>ORGANIZACE</h1>
+				<ul>
+					<li><a href="http://www.cslh.cz/" target="_new">ČSLH</a></li>
+					<li><a href="http://www.apklh.cz/" target="_blank">APK LH</a></li>
+					<li><a href="http://www.iihf.com/" target="_blank">IIHF</a></li>
+					<li><a href="http://www.nhl.cz/" target="_blank">NHL</a></li>
+					<li><a href="http://en.khl.ru/" target="_blank">KHL</a></li>
+					<li><a href="http://theahl.com/" target="_blank">AHL</a></li>
+				</ul>
+			</article>
+
+			<article class="patatext">
+				<h1>ZPRAVODAJSTVÍ</h1>
+				<ul>
+					<li><a href="http://www.hokej.cz/" target="_new">Hokej.cz</a></li>
+					<li><a href="http://isport.blesk.cz/hokej" target="_blank">iSport.cz</a></li>
+					<li><a href="http://hokej.idnes.cz/" target="_blank">iDnes.cz</a></li>
+					<li><a href="http://www.sport.cz/hokej/#hp-list-top" target="_blank">Sport.cz</a></li>
+					<li><a href="http://sport.lidovky.cz/hokej.aspx" target="_blank">Lidovky.cz</a></li>
+					<li><a href="http://sport.aktualne.cz/hokej/" target="_blank">Aktualne.cz</a></li>
+					<li><a href="http://www.tyden.cz/rubriky/sport/hokej/" target="_blank">Tyden.cz</a></li>
+				</ul>
+			</article>
+
+			<article class="patatext">
+				<h1>SOUTĚŽE</h1>
+				<ul>
+					<li><a href="http://www.hokej.cz/cz/reprezentace/" target="_new"> Reprezentace</a></li>
+					<li><a href="http://www.hokej.cz/cz/tipsport-extraliga/" target="_new">Tipsport extraliga</a></li>
+					<li><a href="http://www.hokej.cz/cz/1-liga/" target="_blank">1.liga</a></li>
+					<li><a href="http://www.hokej.cz/cz/2-liga/" target="_blank">2.liga</a></li>
+					<li><a href="http://www.hokej.cz/cz/mladez/" target="_blank">Mládež</a></li>
+					<li><a href="http://www.hokej.cz/cz/euro-hockey-tour/" target="_blank">Euro Hockey Tour</a></li>
+					<li><a href="http://www.hokej.cz/cz/european-trophy/" target="_blank">European Trophy</a></li>
+				</ul>
+			</article>
+		</div>
+		<div class="copyright">
+			<span style="font-family:  'Open Sans', sans-serif;color:black;font-size:10px;">
+		<br>
+		<strong>© Copyright:</strong> CAIHP o.s., Všechna práva vyhrazena.
+		<br><strong>Webmaster:</strong> <a href="http://www.legal-soft.cz" target="_blank">Legalsoft s.r.o.</a>
+
+		</span>
+		</div>
+	<footer>
 </body>
 <script>
 	$(function() {
